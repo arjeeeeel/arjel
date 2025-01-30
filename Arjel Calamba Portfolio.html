@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - ARJEL CALAMBA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background:white;
+      color: skyblue;
+      line-height: 1.6;
+      background-image:url('aura.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+   h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      color: dodgerblue;
+   }
+
+    .navbar {
+      background-image:url('aura.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 20px 40px;
+      position:fixed;
+     top: 0;
+     left:0;
+      width: 100%;
+      z-index: 10;
+      
+      
+      
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 0px;
+      
+      
+    }
+    .navbar a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 25px;
+      color: dodgerblue;
+    }
+    .navbar:hover{
+      color: dodgerblue;
+      text-decoration: none;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .nav {
+      text-align: center;
+      padding: 100px 20px;
+      background-image:url('gojo.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      border-bottom: lightskyblue solid 1px;
+      margin-top:70px
+ 
+    }
+    .nav{
+      height:30vh;
+    }
+    .nav h1 {
+      font-size: 48px;
+      padding-top: 100px;
+      text-shadow: 
+      0 0 10px deepskyblue,
+      0 0 20px deepskyblue,
+      0 0 40px deepskyblue,
+      0 0 80px deepskyblue;
+      
+    }
+    .nav h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: white;
+      text-shadow: 
+      0 0 10px deepskyblue,
+      0 0 20px deepskyblue,
+      0 0 40px deepskyblue,
+      0 0 80px deepskyblue;
+    }
+      .nav p{
+        color: white;
+      text-shadow: 
+      0 0 10px deepskyblue,
+      0 0 20px deepskyblue,
+      0 0 40px deepskyblue,
+      0 0 80px deepskyblue;
+        
+      }
+    .btn  {
+      background: deepskyblue;
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      position: relative;
+      
+      
+     
+    }
+    .btn a:hover, a:link, a:visited {
+      color:white;
+      
+    }
+    .about {
+      padding: 50px 20px;
+      border-top: white solid 2px;
+      height:30vh;
+      text-align: center;
+      border-bottom: lightskyblue solid 1px;
+    }
+    .about-content {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+       .about h2 {
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 70px;
+      color:dodgerblue;
+    
+    }
+    .profile-pic {
+      position: relative;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: solid black 2px;
+    }
+        .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .about-content .text {
+      max-width: 600px;
+    }
+    .about-content .text h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: dodgerblue;
+    }
+    .about-content .text p {
+      margin-bottom: 15px;
+      color: dodgerblue;
+    }
+    .skills {
+      padding: 50px 20px;
+      border-bottom: lightskyblue solid 1px;
+     height:20vh
+     padding-top: 30px;
+    }
+    
+    }
+    .skills h2{
+      color: dodgerblue;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      text-align: center
+   
+      
+    }
+    .skill-item {
+      padding: 20px;
+      border-radius: 20%;
+      color: dodgerblue;
+      text-shadow: 
+      0 0 10px deepskyblue,
+      0 0 20px deepskyblue,
+      0 0 40px deepskyblue,
+      0 0 80px deepskyblue;
+      font-size: 18px;
+      
+    }
+     .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+
+    /* Projects Section */
+    .projects {
+     padding: 50px 20px;
+      border-bottom: lightskyblue solid 1px;
+      
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      
+    }
+
+    .project-item {
+      background: whitesmoke;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      border: solid deepskyblue 2px;
+    }
+.project-item img {
+  max-width: 90%; 
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.project-item img:hover{
+  transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);"
+      }
+}
+      
+    .project-item h3 {
+
+      
+    }
+    .project-item h3{
+      color:dodgerblue;
+      margin-bottom: 10px;
+    }
+    .project-item h2{
+      color: dodgerblue;
+    }
+    .project-item p{
+      font-weight:bold;
+    }
+    .contact {
+      background:;
+      padding: 50px 20px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px skyblue solid;
+      border-radius: 5px;
+      background: white;
+      color: black;
+    }
+
+    .contact-form button {
+      background: whitesmoke;
+      padding: 10px 20px;
+      border: solid skyblue 2px;
+      color: skyblue;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: aliceblue;
+    }
+   .project-item p{
+     text-align: left;
+     padding-left: 50px;
+     text-decoration: none;
+    }
+    .project-item a {
+      text-decoration: none;
+      font-size:20px;
+    
+    }
+     .project-item a:hover, a:link,  .project-item a {
+        text-decoration: none;
+      }a:visited {
+      color: skyblue;
+    }
+    .info p{
+     color:dodgerblue;
+    }
+    .info a{
+      color:skyblue
+ 
+    }
+  </style>
+</head>
+<body>
+ 
+  <header class="nav" id="home">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home"style="color: dodgerblue;">Home</a></li>
+        <li><a href="#about"style="color: dodgerblue;">About</a></li>
+        <li><a href="#skills"style="color: dodgerblue;">Skills</a></li>
+        <li><a href="#projects"style="color: dodgerblue;">Projects</a></li>
+        <li><a href="#contact"style="color: dodgerblue;">Contact</a></li>
+      </ul>
+    </nav>
+<section>
+      <h1>Hello, My Name is</h1>
+      <h2>ARJEL L. CALAMBA</h2>
+      <p class="role">Frontend Developer</p><br>
+    </div>
+  </header>
+  </section>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="arjel.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="text">
+          <h3>I’m ARJEL Calamba </h3>
+          <p>I'm an <strong>IT student </strong> inspired to be <strong>Frontend Developer </strong>
+           <p>Welcome to my portfolio. As an IT student, I'm inspired to pursue a career as a front-end developer and excited to share my projects and experiences with you.</p>
+           <p>
+          Where creativity meets code
+          </p>
+          
+          <p>Here's my resume you can check it for yourself</p><br>
+          
+             <a href="https://drive.google.com/file/d/1sSHjOnX0acAbEjDDpAVCsSfiz9lQLT2s/view?usp=drivesdk"style = "color: white;" class="btn">Resume</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Programming Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">C++</div>
+      </div>
+    </div>
+  </section>
+   <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="ui.jpg" alt="Project 1">
+          <h3>Calendar</h3>
+          <p>This is a Web Application that we created with my classmate for our Research defence in SHS</p>
+        </div>
+        <div class="project-item">
+          <img src="calendar.jpg" alt="Project 2">
+          <h3>Calendar</h3>
+          <p>This is my First and own Calendar design using HTML and CSS in SHS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section id="skills" class="skills">
+    <div class="container">
+      <h2>Editing Software</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Canva</div>
+        <div class="skill-item">PicsArt</div>
+        <div class="skill-item">Microsoft</div>
+    </div>
+  </section>
+   <section id="projects" class="projects">
+     <div class="container">
+       <h2>Graphic Design</h2>
+       
+       <div class="project-grid">
+         <div class="project-item">
+           <img src="design1.png" alt="Project 1">
+           <h3>Jersey Design</h3>
+           <p>This jersey design that i made for my friends basketball tournament.</p>
+           </div>
+         <div class="project-item">
+           <img src="design2.jpg" alt="Project 2">
+           <h3>Cover Album Inspo</h3>
+           <p>This is my First and own Calendar design using HTML and CSS in SHS</p>
+           
+         </div>
+          <div class="project-item">
+            <img src="design3.png" alt="Project 2">
+            <h3>Product Advertisement</h3>
+            <p>This product advertisement that I creat when i was in SHS for my business proposal</p>
+          </div>
+         <div class="project-grid">
+           <div class="project-item">
+           <img src="design4.png" alt="Project 1">
+           <h3>Product Advertisement</h3>
+           <p>This product advertisement that I created when i was in SHS for my business proposal</p>
+           </div>       
+       </div>
+     </div>
+     
+   </section>
+   
+ 
+<section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" style="color: dodgerblue">Send Message</button>
+        <div class="project-grid">
+          <div class="project-item">
+            <h3 style="color: dodgerblue;">Here's my others Social media accounts</h3>
+     <div class="info">
+      <p> Email: <a href="mailto: calambaarjel@gmail.com">calambaarjel@gmail.com </a></p>
+      <p> Facebook: <a href="https://www.facebook.com/arjellllll">Arjel Calamba</a></p
+      <p> Instagram: <a href="https://www.instagram.com/ai.yrtsh?igsh=MXU4ODljYmV2NDh2cA==">ai.yrtsh </a></p>
+      </div>
+      
+         </div>
+      </form>
+    </div>
+    
+  </section>
+  <script>
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+event.preventDefault();
+
+alert('Message sent! Thank you!');
+document.querySelector('.contact-form').reset();
+});</script>
+  <footer>
+    <p style="text-align: center; color: dodgerblue; font-size: 10px">&copy; 2025 Arjel L. Calamba. All rights reserved.</p>
+  </footer>*/
+  
+</body>
+</html>
