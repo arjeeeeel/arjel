@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1">
   <title>Portfolio - ARJEL CALAMBA</title>
   <style>
     * {
@@ -21,7 +21,7 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 100%;
       margin: 0 auto;
       padding: 20px;
     }
@@ -39,33 +39,22 @@
       background-position: center;
       padding: 20px 40px;
       position:fixed;
-     top: 0;
-     left:0;
+      top: 0;
+      left:0;
       width: 100%;
       z-index: 10;
-      
-      
-      
     }
     .navbar ul {
       list-style: none;
       display: flex;
       justify-content: space-evenly;
-      gap: 0px;
-      
-      
+      flex-wrap: wrap;
     }
     .navbar a {
       text-decoration: none;
       font-weight: bold;
       font-size: 25px;
       color: dodgerblue;
-    }
-    .navbar:hover{
-      color: dodgerblue;
-      text-decoration: none;
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
     .nav {
       text-align: center;
@@ -75,12 +64,18 @@
       background-position: center;
       color: white;
       border-bottom: lightskyblue solid 1px;
-      margin-top:70px
- 
+      margin-top:70px;
     }
-    .nav{
-      height:30vh;
+    .nav {
+      height:80vh;
     }
+      .nav{
+       text-shadow: 
+      0 0 10px deepskyblue,
+      0 0 20px deepskyblue,
+      0 0 40px deepskyblue,
+      0 0 80px deepskyblue; 
+      }
     .nav h1 {
       font-size: 48px;
       padding-top: 100px;
@@ -89,7 +84,6 @@
       0 0 20px deepskyblue,
       0 0 40px deepskyblue,
       0 0 80px deepskyblue;
-      
     }
     .nav h2 {
       font-size: 35px;
@@ -102,15 +96,6 @@
       0 0 40px deepskyblue,
       0 0 80px deepskyblue;
     }
-      .nav p{
-        color: white;
-      text-shadow: 
-      0 0 10px deepskyblue,
-      0 0 20px deepskyblue,
-      0 0 40px deepskyblue,
-      0 0 80px deepskyblue;
-        
-      }
     .btn  {
       background: deepskyblue;
       padding: 10px 20px;
@@ -131,7 +116,7 @@
     .about {
       padding: 50px 20px;
       border-top: white solid 2px;
-      height:30vh;
+      height:80vh;
       text-align: center;
       border-bottom: lightskyblue solid 1px;
     }
@@ -140,12 +125,13 @@
       gap: 20px;
       align-items: center;
       justify-content: space-between;
+      padding-left: 200px;
       
     }
        .about h2 {
       text-align: left;
       margin-top: 10px;
-      margin-left: 70px;
+      margin-left: 280px;
       color:dodgerblue;
     
     }
@@ -175,7 +161,7 @@
     .skills {
       padding: 50px 20px;
       border-bottom: lightskyblue solid 1px;
-     height:20vh
+     height:60vh
      padding-top: 30px;
     }
     
@@ -207,59 +193,37 @@
       transform: translateY(-5px);
     }
 
-
-    /* Projects Section */
     .projects {
-     padding: 50px 20px;
+      padding: 50px 20px;
       border-bottom: lightskyblue solid 1px;
-      
     }
-
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
-      
     }
-
     .project-item {
       background: whitesmoke;
       padding: 20px;
       border-radius: 10px;
       text-align: center;
       border: solid deepskyblue 2px;
+      max-width: 350px;
     }
-.project-item img {
-  max-width: 90%; 
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.project-item img:hover{
-  transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);"
-      }
-}
-      
+    .project-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
     .project-item h3 {
-
-      
-    }
-    .project-item h3{
       color:dodgerblue;
       margin-bottom: 10px;
     }
-    .project-item h2{
-      color: dodgerblue;
-    }
-    .project-item p{
-      font-weight:bold;
-    }
     .contact {
-      background:;
       padding: 50px 20px;
     }
-
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -267,7 +231,6 @@
       max-width: 600px;
       margin: 0 auto;
     }
-
     .contact-form input,
     .contact-form textarea {
       padding: 10px;
@@ -277,7 +240,6 @@
       background: white;
       color: black;
     }
-
     .contact-form button {
       background: whitesmoke;
       padding: 10px 20px;
@@ -287,31 +249,38 @@
       border-radius: 5px;
       cursor: pointer;
     }
-
     .contact-form button:hover {
       background: aliceblue;
     }
-   .project-item p{
-     text-align: left;
-     padding-left: 50px;
-     text-decoration: none;
+    .info p {
+      color:dodgerblue;
+      text-align: left;
+      padding-left: 35px;
     }
-    .project-item a {
+    .info a {
+      color:skyblue;
       text-decoration: none;
-      font-size:20px;
-    
+      
     }
-     .project-item a:hover, a:link,  .project-item a {
-        text-decoration: none;
-      }a:visited {
-      color: skyblue;
-    }
-    .info p{
-     color:dodgerblue;
-    }
-    .info a{
-      color:skyblue
- 
+    @media screen and (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .skills-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav h1 {
+        font-size: 36px;
+      }
+      .nav h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -412,7 +381,6 @@
             <h3>Product Advertisement</h3>
             <p>This product advertisement that I creat when i was in SHS for my business proposal</p>
           </div>
-         <div class="project-grid">
            <div class="project-item">
            <img src="design4.png" alt="Project 1">
            <h3>Product Advertisement</h3>
@@ -437,7 +405,7 @@
             <h3 style="color: dodgerblue;">Here's my others Social media accounts</h3>
      <div class="info">
       <p> Email: <a href="mailto: calambaarjel@gmail.com">calambaarjel@gmail.com </a></p>
-      <p> Facebook: <a href="https://www.facebook.com/arjellllll">Arjel Calamba</a></p
+      <p> Facebook: <a href="https://www.facebook.com/arjellllll">Arjel Calamba</a></p>
       <p> Instagram: <a href="https://www.instagram.com/ai.yrtsh?igsh=MXU4ODljYmV2NDh2cA==">ai.yrtsh </a></p>
       </div>
       
@@ -459,4 +427,4 @@ document.querySelector('.contact-form').reset();
   </footer>*/
   
 </body>
-</html>
+          </html>
